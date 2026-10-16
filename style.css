@@ -2,9 +2,9 @@
 :root{color-scheme:light;background:#f5f2e7;color:#254638;font-family:Georgia,'Times New Roman',serif}
 body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 39%,#fffdf3 0%,#f5f2e7 65%)}
 main{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:20px 20px 64px}
-.scene{width:min(760px,100%);margin-top:-45px}
+.scene{width:min(680px,100%);margin-top:-45px}
 svg{display:block;width:100%;overflow:visible}
-h1{font-size:clamp(42px,7vw,78px);line-height:1.1;font-weight:400;letter-spacing:-.045em;text-align:center;margin:-31px 0 0;animation:reveal 1.5s 3.1s both}
+h1{position:relative;z-index:2;font-size:clamp(34px,5.5vw,62px);line-height:1.06;font-weight:400;letter-spacing:-.045em;text-align:center;margin:-31px 0 0;animation:reveal 1.5s 4.4s both}
 .accent{display:block;width:34px;height:2px;background:#b49a56;margin:28px auto 0}
 .crown{transform-origin:476px 226px;animation:sway 5s ease-in-out infinite alternate}
 .falling{transform-origin:504px 255px;animation:fall 3s forwards}
@@ -24,4 +24,7 @@ h1{font-size:clamp(42px,7vw,78px);line-height:1.1;font-weight:400;letter-spacing
 @keyframes halves-right{0%{opacity:0;transform:translate(-15px,-10px) rotate(-15deg)}20%{opacity:1}65%{transform:translate(12px,-12px) rotate(14deg)}100%{opacity:1;transform:translate(10px,0) rotate(8deg)}}
 @keyframes reveal{from{opacity:0;transform:translateY(15px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
 @media(max-width:600px){main{padding:20px 14px 80px}.scene{width:125%;max-width:620px;margin-top:-20px}h1{margin-top:0}.accent{margin-top:22px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}.falling,.splash,.drops{display:none}.half{opacity:1}.shadow{opacity:.12}}
+.screen-splash{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.oil-wave{position:absolute;left:var(--impact-x,51%);top:var(--impact-y,64%);width:220vmax;height:220vmax;margin:-110vmax;border-radius:44% 56% 61% 39% / 53% 41% 59% 47%;background:radial-gradient(ellipse at 44% 42%,#f9e8b8 0%,#e4bd60 35%,#c49335 65%,#e8c771 100%);box-shadow:0 0 0 3vmax #edcf8680,0 0 0 9vmax #e7c16b30;animation:screen-wave 3s 2.8s both;will-change:transform,opacity}
+@keyframes screen-wave{0%{opacity:0;transform:scale(0) rotate(-20deg)}8%{opacity:.96;transform:scale(.025) rotate(-20deg)}37%,50%{opacity:.96;transform:scale(1) rotate(12deg)}100%{opacity:0;transform:scale(1.12) rotate(20deg)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}.falling,.splash,.drops,.screen-splash{display:none}.half{opacity:1}.shadow{opacity:.12}}
