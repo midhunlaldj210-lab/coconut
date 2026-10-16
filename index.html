@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e7">
+  <meta name="description" content="Coming Soon.">
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 0 1000 760" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="trunk" x1="0" x2="1"><stop stop-color="#65533c"/><stop offset=".5" stop-color="#a18b64"/><stop offset="1" stop-color="#756447"/></linearGradient>
+          <linearGradient id="leaf" x2=".8" y2="1"><stop stop-color="#203f32"/><stop offset="1" stop-color="#66845a"/></linearGradient>
+          <radialGradient id="nut"><stop stop-color="#a78652"/><stop offset="1" stop-color="#59432c"/></radialGradient>
+          <linearGradient id="oil" x2="0" y2="1"><stop stop-color="#e9c568"/><stop offset="1" stop-color="#b78a35"/></linearGradient>
+          <g id="frond">
+            <path d="M0 0 Q112 -78 244 -10 Q142 -52 0 0" fill="url(#leaf)"/>
+            <path d="M18 -9 Q39 12 30 53 Q49 20 43 -18 Q61 5 59 48 Q78 17 68 -26 Q91 -4 91 38 Q107 7 94 -30 Q115 -8 122 31 Q134 2 119 -32 Q146 -7 151 30 Q164 5 145 -28 Q173 -3 184 35 Q193 7 169 -22 Q207 0 218 40 Q225 12 197 -13 Q227 4 244 37 L244 -10 Q126 -76 18 -9" fill="url(#leaf)"/>
+            <path d="M0 0 Q125 -56 244 -10" fill="none" stroke="#a4af75" stroke-width="1.3"/>
+          </g>
+        </defs>
+        <circle cx="515" cy="285" r="204" fill="#eae9d7" opacity=".64"/>
+        <circle cx="652" cy="151" r="42" fill="#e7d9a7" opacity=".65"/>
+        <path d="M140 626 Q480 601 860 626" fill="none" stroke="#d4d3bb" stroke-width="1.5"/>
+        <ellipse cx="458" cy="628" rx="147" ry="12" fill="#d7d4bc" opacity=".42"/>
+        <path d="M337 623 Q402 415 466 227 L484 229 Q434 423 383 625Z" fill="url(#trunk)"/>
+        <g fill="none" stroke="#574831" stroke-width="3" opacity=".4">
+          <path d="M345 595l46 10 M353 568l44 10 M362 540l43 10 M371 511l42 10 M380 482l41 10 M390 452l40 10 M400 422l38 10 M410 392l36 10 M421 361l33 10 M431 331l31 9 M443 299l27 9 M454 268l23 8"/>
+        </g>
+        <g class="crown">
+          <use href="#frond" transform="translate(476 226) rotate(-167) scale(1.12 .95)"/>
+          <use href="#frond" transform="translate(476 226) rotate(-137) scale(.92 .85)"/>
+          <use href="#frond" transform="translate(476 226) rotate(-100) scale(.65 .8)"/>
+          <use href="#frond" transform="translate(476 226) rotate(-35) scale(.92 .95)"/>
+          <use href="#frond" transform="translate(476 226) rotate(5) scale(1.18 1)"/>
+          <use href="#frond" transform="translate(476 226) rotate(43) scale(.87 .9)"/>
+          <use href="#frond" transform="translate(476 226) rotate(145) scale(.9 .95)"/>
+          <ellipse cx="462" cy="237" rx="17" ry="21" fill="#6f6840" transform="rotate(24 462 237)"/>
+          <ellipse cx="486" cy="234" rx="17" ry="21" fill="#88804b"/>
+        </g>
+        <ellipse class="shadow" cx="522" cy="624" rx="32" ry="6" fill="#5c4c2a"/>
+        <g class="falling">
+          <ellipse cx="504" cy="255" rx="23" ry="27" fill="url(#nut)" transform="rotate(-20 504 255)"/>
+          <path d="M500 232q-15 22-3 47 M509 231q-10 25 1 47" fill="none" stroke="#c3a16a" opacity=".45"/>
+        </g>
+        <ellipse class="pool" cx="522" cy="626" rx="98" ry="10" fill="url(#oil)" opacity=".65"/>
+        <g class="splash" fill="url(#oil)">
+          <path d="M520 625 Q491 619 466 574 Q460 561 455 568 Q452 580 482 613 Q453 602 429 604 Q421 608 440 613 Q478 618 488 629Z"/>
+          <path d="M520 625 Q555 612 575 566 Q581 553 586 563 Q589 580 560 612 Q594 592 618 600 Q627 607 608 609 Q573 618 558 630Z"/>
+        </g>
+        <g class="drops" fill="#ceaa50">
+          <ellipse cx="434" cy="558" rx="4" ry="7" transform="rotate(-35 434 558)"/>
+          <ellipse cx="479" cy="540" rx="3" ry="6"/>
+          <ellipse cx="591" cy="536" rx="4" ry="7" transform="rotate(27 591 536)"/>
+          <circle cx="623" cy="576" r="4"/><circle cx="410" cy="590" r="3"/>
+        </g>
+        <g class="half left">
+          <path d="M487 605Q488 643 525 625Z" fill="#6c4d30"/>
+          <ellipse cx="506" cy="615" rx="22" ry="9" transform="rotate(29 506 615)" fill="#faf7e8" stroke="#8b6540" stroke-width="4"/>
+        </g>
+        <g class="half right">
+          <path d="M532 624Q567 642 572 606Z" fill="#6c4d30"/>
+          <ellipse cx="552" cy="615" rx="23" ry="9" transform="rotate(-26 552 615)" fill="#faf7e8" stroke="#8b6540" stroke-width="4"/>
+        </g>
+        <g stroke="#7c8b62" fill="none" stroke-width="2"><path d="M347 624q-14-28-25-25 M351 624q-2-29 7-38 M355 624q15-24 28-23"/></g>
+      </svg>
+    </div>
+    <h1>Coming Soon<span class="accent" aria-hidden="true"></span></h1>
+  </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{box-sizing:border-box}
+:root{color-scheme:light;background:#f5f2e7;color:#254638;font-family:Georgia,'Times New Roman',serif}
+body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 39%,#fffdf3 0%,#f5f2e7 65%)}
+main{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;padding:20px 20px 64px}
+.scene{width:min(760px,100%);margin-top:-45px}
+svg{display:block;width:100%;overflow:visible}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.1;font-weight:400;letter-spacing:-.045em;text-align:center;margin:-31px 0 0;animation:reveal 1.5s 3.1s both}
+.accent{display:block;width:34px;height:2px;background:#b49a56;margin:28px auto 0}
+.crown{transform-origin:476px 226px;animation:sway 5s ease-in-out infinite alternate}
+.falling{transform-origin:504px 255px;animation:fall 3s forwards}
+.shadow{transform-origin:522px 624px;animation:shadow 3s forwards}
+.splash{transform-origin:522px 626px;animation:splash 1.2s 2.75s both}
+.drops{transform-origin:522px 626px;animation:drops 1.4s 2.8s both}
+.pool{transform-origin:522px 626px;animation:pool 1.6s 2.75s both}
+.half{opacity:0;animation:halves 1s 2.8s forwards;transform-origin:522px 626px}
+.right{animation-name:halves-right}
+@keyframes sway{from{transform:rotate(-1.5deg)}to{transform:rotate(1.5deg)}}
+@keyframes fall{0%,35%{transform:translate(0,0) rotate(0)}45%{transform:translate(1px,0) rotate(-12deg)}53%{transform:translate(0,0) rotate(10deg)}60%{transform:translate(0,0) rotate(-5deg);animation-timing-function:cubic-bezier(.5,0,1,.6)}93%{transform:translate(18px,345px) rotate(130deg);opacity:1}94%,100%{transform:translate(18px,345px) rotate(130deg);opacity:0}}
+@keyframes shadow{0%,55%{opacity:.04;transform:scale(1.7)}93%,100%{opacity:.17;transform:scale(1)}}
+@keyframes splash{0%{opacity:0;transform:scale(.1)}18%{opacity:.9;transform:scale(1)}55%{opacity:.75;transform:scale(1.17,.8)}100%{opacity:0;transform:scale(1.4,.1)}}
+@keyframes drops{0%{opacity:0;transform:translateY(30px) scale(.4)}22%{opacity:1;transform:translateY(-12px) scale(1)}100%{opacity:0;transform:translateY(65px) scale(1.2)}}
+@keyframes pool{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes halves{0%{opacity:0;transform:translate(15px,-10px) rotate(15deg)}20%{opacity:1}65%{transform:translate(-12px,-8px) rotate(-14deg)}100%{opacity:1;transform:translate(-10px,0) rotate(-8deg)}}
+@keyframes halves-right{0%{opacity:0;transform:translate(-15px,-10px) rotate(-15deg)}20%{opacity:1}65%{transform:translate(12px,-12px) rotate(14deg)}100%{opacity:1;transform:translate(10px,0) rotate(8deg)}}
+@keyframes reveal{from{opacity:0;transform:translateY(15px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+@media(max-width:600px){main{padding:20px 14px 80px}.scene{width:125%;max-width:620px;margin-top:-20px}h1{margin-top:0}.accent{margin-top:22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}.falling,.splash,.drops{display:none}.half{opacity:1}.shadow{opacity:.12}}
